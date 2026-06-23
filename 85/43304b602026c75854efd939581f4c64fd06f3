@@ -1,0 +1,19 @@
+docker/java/21-bookworm/Dockerfile
+  s_602acfe22d6a5a::t_9d89b2876d1bc2 13-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "8543304b602026c75854efd939581f4c64fd06f3",
+  "prompts": {},
+  "sessions": {
+    "s_602acfe22d6a5a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "288a55a4-7389-4060-9e8e-9f971bb53f33",
+        "model": "GLM-5.1"
+      },
+      "human_author": "zhao-wuyan <zhao-wuyan@exampl.com>"
+    }
+  }
+}
