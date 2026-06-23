@@ -1,0 +1,19 @@
+.github/workflows/ci.yaml
+  s_602acfe22d6a5a::t_7d2cad6a2fc4e3 136-185
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "000754fe080b34f213728de0e25578c14fb58cf4",
+  "prompts": {},
+  "sessions": {
+    "s_602acfe22d6a5a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "288a55a4-7389-4060-9e8e-9f971bb53f33",
+        "model": "GLM-5.1"
+      },
+      "human_author": "zhao-wuyan <zhao-wuyan@exampl.com>"
+    }
+  }
+}
