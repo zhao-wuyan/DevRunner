@@ -1,0 +1,33 @@
+.github/workflows/ci.yaml
+  s_602acfe22d6a5a::t_fdd2bc447081f7 15,80-81,134-136
+docker/java/21-bookworm/Dockerfile
+  s_602acfe22d6a5a::t_2e50a7ed9b504a 2
+docker/maestro/bookworm/Dockerfile
+  s_602acfe22d6a5a::t_5958d2185838df 10,13-49
+  s_602acfe22d6a5a::t_2e50a7ed9b504a 2
+  s_602acfe22d6a5a::t_5029bd630f4ebd 1,3-9,11-12,50-51
+docker/rust/1.91-bookworm/Dockerfile
+  s_602acfe22d6a5a::t_2e50a7ed9b504a 2
+docker/devbox/bookworm/Dockerfile
+  s_602acfe22d6a5a::t_2e50a7ed9b504a 2
+docker/frontend/node20/Dockerfile
+  s_602acfe22d6a5a::t_2e50a7ed9b504a 2
+docker/golang/1.25-bookworm/Dockerfile
+  s_602acfe22d6a5a::t_2e50a7ed9b504a 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "67f1623dd3827e6cd451bffa8678a36284db06cb",
+  "prompts": {},
+  "sessions": {
+    "s_602acfe22d6a5a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "288a55a4-7389-4060-9e8e-9f971bb53f33",
+        "model": "GLM-5.1"
+      },
+      "human_author": "zhao-wuyan <zhao-wuyan@exampl.com>"
+    }
+  }
+}
