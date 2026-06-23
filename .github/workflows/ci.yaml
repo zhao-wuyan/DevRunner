@@ -134,7 +134,7 @@ jobs:
             DEBIAN_SECURITY_MIRROR=${{ env.DEBIAN_SECURITY_MIRROR }}
           push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
 
-  build-maestro:
+  build-devbox-maestro:
     needs: build-stacks
     if: always() && needs.build-stacks.result != 'failed'
     runs-on: ubuntu-latest
@@ -142,7 +142,7 @@ jobs:
       contents: read
       packages: write
     env:
-      STACK: maestro
+      STACK: devbox-maestro
       VERSION: bookworm
     steps:
       - name: Checkout
@@ -174,7 +174,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build maestro
+      - name: Build devbox-maestro (bookworm)
         uses: docker/build-push-action@v5
         with:
           context: .

@@ -2,9 +2,9 @@
 ARG BASE_IMAGE=ghcr.io/zhao-wuyan/devrunner/devbox:bookworm
 FROM ${BASE_IMAGE}
 
-LABEL org.opencontainers.image.title="DevRunner Maestro" \
+LABEL org.opencontainers.image.title="DevRunner Devbox Maestro" \
       org.opencontainers.image.source="https://github.com/zhao-wuyan/DevRunner" \
-      org.opencontainers.image.description="Devbox with Maestro-Flow CLI and full component suite"
+      org.opencontainers.image.description="Devbox with Maestro-Flow CLI and full component suite (devbox-maestro:bookworm)"
 
 # Non-interactive full installation of maestro-flow
 # Profile schema v1: all 25 component groups + hooks + mcp + statusline enabled
