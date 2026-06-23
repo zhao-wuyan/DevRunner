@@ -85,3 +85,4 @@ python3 -c "import scrapy; print('scrapy:', scrapy.__version__)"  # 2.14.1
   - PR: build only (no push).
   - Push to `main` branch: login to GHCR with `GITHUB_TOKEN` and push tags from metadata (`bookworm`, `latest`, branch/tag-derived). Non-main branches/tags build only. Target registry: `ghcr.io/chaitin/monkeycode-runner`.
 - No personal access token needed; workflow requests `packages: write` and `contents: read` via `GITHUB_TOKEN` (ensure Actions permissions allow this if repository is restricted).
+ 
