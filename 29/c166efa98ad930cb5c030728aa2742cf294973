@@ -1,0 +1,22 @@
+docker/devbox-maestro/bookworm/Dockerfile
+  s_602acfe22d6a5a::t_27fbd4e2024fbe 7
+  s_602acfe22d6a5a::t_6dfbb08abd0fb3 5
+.github/workflows/ci.yaml
+  s_602acfe22d6a5a::t_5b1c0b43a6b14a 137,145,177
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "29c166efa98ad930cb5c030728aa2742cf294973",
+  "prompts": {},
+  "sessions": {
+    "s_602acfe22d6a5a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "288a55a4-7389-4060-9e8e-9f971bb53f33",
+        "model": "GLM-5.1"
+      },
+      "human_author": "zhao-wuyan <zhao-wuyan@exampl.com>"
+    }
+  }
+}
