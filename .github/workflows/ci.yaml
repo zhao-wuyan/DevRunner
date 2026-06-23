@@ -12,10 +12,7 @@ on:
     tags: ["*"]
 
 env:
-  REGISTRY: ghcr.io/chaitin/monkeycode-runner
-  # Default to TUNA mirrors (optimized for mainland China/Asia). You can override these
-  # per repo/org by defining GitHub variables DEBIAN_MIRROR and DEBIAN_SECURITY_MIRROR
-  # if runners are primarily located elsewhere and builds are slow.
+  REGISTRY: ghcr.io/zhao-wuyan/devrunner
   DEBIAN_MIRROR: ${{ vars.DEBIAN_MIRROR || 'https://mirrors.tuna.tsinghua.edu.cn/debian' }}
   DEBIAN_SECURITY_MIRROR: ${{ vars.DEBIAN_SECURITY_MIRROR || 'https://mirrors.tuna.tsinghua.edu.cn/debian-security' }}
 
@@ -80,6 +77,8 @@ jobs:
         include:
           - stack: devbox
             version: bookworm
+          - stack: maestro
+            version: bookworm
           - stack: golang
             version: 1.25-bookworm
           - stack: frontend
@@ -132,4 +131,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            DEBIAN_MIRROR=${{ env.DEBIAN_MIRROR }}
+            DEBIAN_SECURITY_MIRROR=${{ env.DEBIAN_SECURITY_MIRROR }}
           push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}

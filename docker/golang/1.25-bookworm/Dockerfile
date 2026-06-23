@@ -1,5 +1,5 @@
 # Go developer image based on DevRunner base (Debian bookworm)
-ARG BASE_IMAGE=ghcr.io/chaitin/monkeycode-runner/base:bookworm
+ARG BASE_IMAGE=ghcr.io/zhao-wuyan/devrunner/base:bookworm
 FROM ${BASE_IMAGE}
 
 LABEL org.opencontainers.image.title="DevRunner Go" \
