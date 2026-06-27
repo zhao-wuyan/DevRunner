@@ -1,0 +1,20 @@
+docker/devbox-maestro/bookworm/Dockerfile
+  s_602acfe22d6a5a::t_85cbad4962aba3 9-13
+  s_602acfe22d6a5a::t_93b379f5d6e57a 58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "8a80ac84b8f5ccea8f09d516a6decc0dfbedf27f",
+  "prompts": {},
+  "sessions": {
+    "s_602acfe22d6a5a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "288a55a4-7389-4060-9e8e-9f971bb53f33",
+        "model": "glm-5.2-lowend"
+      },
+      "human_author": "zhao-wuyan <zhao-wuyan@exampl.com>"
+    }
+  }
+}
