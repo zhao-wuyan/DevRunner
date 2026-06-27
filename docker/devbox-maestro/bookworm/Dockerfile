@@ -6,7 +6,10 @@ LABEL org.opencontainers.image.title="DevRunner Devbox Maestro" \
       org.opencontainers.image.source="https://github.com/zhao-wuyan/DevRunner" \
       org.opencontainers.image.description="Devbox with Maestro-Flow CLI and full component suite (devbox-maestro:bookworm)"
 
-# Non-interactive full installation of maestro-flow
+# Layer 1 (~1G): maestro-flow CLI + full component install
+# Version not pinned — rebuild picks up the latest maestro-flow from npm.
+# Rebuild this image only when you intend to upgrade maestro; Docker caches
+# this layer across unrelated rebuilds (RUN string unchanged → cache hit).
 # Profile schema v1: all 25 component groups + hooks + mcp + statusline enabled
 RUN npm install -g maestro-flow \
     && maestro --version \
@@ -47,5 +50,10 @@ RUN npm install -g maestro-flow \
       '}' > ~/.maestro/install-profiles/full.json \
     && maestro install --import ~/.maestro/install-profiles/full.json \
     && rm -rf ~/.maestro/install-profiles/full.json
+
+# Layer 2 (small, volatile): opencode CLI + maestro delegate reset
+# Combine frequently-changing tools here so only this small layer re-downloads.
+RUN npm install -g opencode-ai@latest \
+    && maestro config delegate reset
 
 WORKDIR /workspace
